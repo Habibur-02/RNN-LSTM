@@ -32,7 +32,7 @@ def create_sequences(features, target, time_steps=6):
     """
     X, y = [], []
     for i in range(len(features) - time_steps):
-        # ফিচার (ইনপুট): time_steps সংখ্যক মাসের আবহাওয়া ডেটা
+        
         X.append(features[i:(i + time_steps), :])
         # টার্গেট (আউটপুট): পরবর্তী মাসের ডেঙ্গু কেস
         y.append(target[i + time_steps, 0])
